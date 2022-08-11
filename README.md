@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Password Validations with Vanilla Javascript
 
 ## Summary
