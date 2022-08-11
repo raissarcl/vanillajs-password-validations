@@ -34,28 +34,40 @@ function repeatedCharRegex(string) {
 }
 
 //validates the password
-function validatePassword(string) {
+export function validatePassword(string) {
   const constraints = [
-                        {characters: false},
-                        {lowercase: false},
-                        {uppercase: false},
-                        {number: false},
-                        {repeatedLetters: false}
-                      ];
+    { characters: false },
+    { lowercase: false },
+    { uppercase: false },
+    { number: false },
+    { repeatedChar: false },
+  ];
 
   const keys = constraints.map(i => Object.keys(i)[0]);
+  const values = [];
+
   let totalModifications = 0;
 
-  constraints[0].characters = amountOfCharactersRegex(string);
-  constraints[1].lowercase = lowercaseRegex(string)
-  constraints[2].uppercase = uppercaseRegex(string);
-  constraints[3].number = numberRegex(string);
-  constraints[4].repeatedLetters = repeatedCharRegex(string);
+  values.push(
+    amountOfCharactersRegex(string),
+    lowercaseRegex(string),
+    uppercaseRegex(string),
+    numberRegex(string),
+    repeatedCharRegex(string)
+  );
 
   constraints.forEach((item, i) => {
-    if(item[keys[i]] === false) totalModifications++;
+    item[keys[i]] = values[i];
   });
 
-  console.log("Total modifications:", totalModifications);
-  console.table(constraints);
+  values.forEach(i => {
+    if (i === false) totalModifications++;
+  });
+
+  const result = [
+    totalModifications,
+    values
+  ];
+
+  return result;
 }
