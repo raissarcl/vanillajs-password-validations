@@ -1,20 +1,20 @@
 //verifies if the amount of characters is between 6 and 20
-function amountCharacters(string) {
+function amountOfCharacters(string) {
   return string.length >= 6 && string.length <= 20;
 }
 
 //verifies if it's a lowercase char
-function isLowercase(itemChar) {
-  return itemChar === itemChar.toLowerCase();
+function isLowercase(charArray) {
+  return charArray.some(i => i === i.toLowerCase());
 }
 
 //verifies if it's an uppercase char
-function isUppercase(itemChar) {
-  return itemChar === itemChar.toUpperCase();
+function isUppercase(charArray) {
+  return charArray.some(i => i === i.toUpperCase());
 }
 
-function isANumber(itemChar) {
-  return itemChar == parseInt(itemChar);
+function isANumber(charArray) {
+  return charArray.some(i => i === parseInt(i));
 }
 
 //verifies if there's 3 or more repeated letters in sequence
@@ -31,35 +31,37 @@ function repeatedChar(charArray) {
 
 //verifies the password
 export function validatePassword(string) {
-  const constraints = [
-    { characters: false },
-    { lowercase: false },
-    { uppercase: false },
-    { number: false },
-    { repeatedChar: false }
-  ];
+  const constraints = {
+    characters: false,
+    lowercase: false,
+    uppercase: false,
+    number: false,
+    repeatedChar: false
+  };
 
-  const keys = constraints.map(i => Object.keys(i)[0]);
+  const constraintKeys = Object.keys(constraints);
+  const constraintValues = [];
   const charArray = Array.from(string);
+
   let totalModifications = 0;
 
-  constraints[0].characters = amountCharacters(string);
+  constraintValues.push(
+    amountOfCharacters(string),
+    isLowercase(charArray),
+    isUppercase(charArray),
+    isANumber(charArray),
+    repeatedChar(charArray)
+  );
 
-  charArray.forEach(item => {
-    if (!constraints[1].lowercase) constraints[1].lowercase = isLowercase(item);
-    if (!constraints[2].uppercase) constraints[2].uppercase = isUppercase(item);
-    if (!constraints[3].number) constraints[3].number = isANumber(item);
-  });
+  constraintKeys.forEach((item, i) => constraints[item] = values[i]);
 
-  constraints[4].repeatedChar = repeatedChar(charArray);
-
-  constraints.forEach((item, i) => {
-    if (item[keys[i]] === false) totalModifications++;
+  constraintValues.forEach(i => {
+    if (i === false) totalModifications++;
   });
 
   const result = {
     totalModifications,
-    constraints
+    constraintValues
   }
 
   return result;
