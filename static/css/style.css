@@ -121,3 +121,45 @@ button:active {
 .constraints>div {
   margin: .8rem 0;
 }
+
+/*----------------RESPONSIVENESS-----------------*/
+
+@media(max-width: 426px) {
+
+  body {
+    font-size: .8rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin: 1rem;
+  }
+
+  .input {
+    flex-direction: column;
+    margin: 1rem;
+  }
+
+  input {
+    border: 1px solid var(--dark-orange);
+
+    margin-bottom: 1rem;
+
+    padding: .6rem 0;
+  }
+
+  button {
+    border: 1px solid var(--dark-orange);
+    border-radius: 5px;
+
+    padding: .6rem 0;
+
+    align-self: center;
+
+    width: 100%;
+  }
+
+  .constraint {
+    margin: 2rem;
+  }
+}
