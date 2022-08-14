@@ -1,7 +1,7 @@
 # Password Validations with Vanilla Javascript
 
 ## Summary
-Simple validations with Vanilla Javascript with two different approaches: with and without Regular Expressions (ReGex). The `validate-password.js` contains the version without regex and `validate-password-regex.js` with regex. Resposiveness will be added in the near future.
+Simple validations with Vanilla Javascript with two different approaches: with and without Regular Expressions (ReGex). The `validate-password.js` contains the version without regex and `validate-password-regex.js` with regex.
 
 ## Validations 
 
