@@ -14,6 +14,6 @@ Simple validations with Vanilla Javascript with two different approaches: with a
 
 ## Running
 
-1. Get all dependencies running on terminal: `yarn`.
-2. Run the scprit to start the server: `yarn start`.
-3. Open on browser: `http://localhost:3000`. 
+1. Get all dependencies running on terminal: `yarn`
+2. Run the script to start the server: `yarn start`
+3. Open on browser: `http://localhost:3000` 
