@@ -17,3 +17,8 @@ Simple validations with Vanilla Javascript with two different approaches: with a
 1) Get all dependencies running on terminal: `yarn`
 2) Run the script to start the server: `yarn start`
 3) Open on browser: `http://localhost:3000` 
+
+
+## Preview
+
+![Validations Page](preview.png)
