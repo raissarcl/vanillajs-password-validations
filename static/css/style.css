@@ -19,9 +19,11 @@
   --button-active: #C78B00;
 }
 
-html {
+* {
   box-sizing: border-box;
+}
 
+html {
   font-family: 'Rokkit', sans-serif;
 }
 
@@ -114,8 +116,6 @@ button:active {
 
   margin: 2rem 0;
   padding: 1rem;
-
-
 }
 
 .constraints>div {
