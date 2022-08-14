@@ -1,0 +1,123 @@
+:root {
+  --background: #C2E0FF;
+
+  --text-blue: #1D5791;
+
+  --dark-orange: #F5882F;
+
+  --text-orange: #BD6B00;
+
+  --margin-orange: #FFD359;
+
+  --input-orange: #FFF0E3;
+
+  --background-constraint: #91C5FA;
+  --background-constraint-shadow: #7DACDB;
+
+  --button: #FCB579;
+  --button-hover: #FFE3A1;
+  --button-active: #C78B00;
+}
+
+html {
+  box-sizing: border-box;
+
+  font-family: 'Rokkit', sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+
+  margin: 3rem 0;
+}
+
+h2 {
+  margin-bottom: 2rem;
+}
+
+section {
+  width: 60%;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 3rem;
+
+  height: 3rem;
+}
+
+input {
+  background-color: var(--input-orange);
+  color: var(--text-orange);
+
+  border: none;
+  border-top: 1px solid var(--dark-orange);
+  border-bottom: 1px solid var(--dark-orange);
+  border-left: 1px solid var(--dark-orange);
+
+  outline: none;
+
+  padding-left: 1rem;
+
+  width: 100%;
+}
+
+button {
+  background-color: var(--button);
+  color: var(--text-orange);
+
+  border: none;
+  border-top: 1px solid var(--dark-orange);
+  border-bottom: 1px solid var(--dark-orange);
+  border-right: 1px solid var(--dark-orange);
+
+  border-radius: 0 5px 5px 0;
+
+  padding: 0 1.2rem;
+
+  font-weight: 700;
+
+  height: 100%;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+}
+
+button:active {
+  background-color: var(--button-active);
+}
+
+.constraints {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+
+  background-color: var(--background-constraint);
+
+  font-weight: 600;
+
+  border-radius: 20px;
+  box-shadow: .2rem .2rem 5px 1px var(--background-constraint-shadow);
+
+  margin: 2rem 0;
+  padding: 1rem;
+
+
+}
+
+.constraints>div {
+  margin: .8rem 0;
+}
