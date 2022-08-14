@@ -6,6 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Rokkitt:wght@200;400;600&display=swap"
+    rel="stylesheet">
+
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/style.css">
   <title>Password Validations</title>
@@ -16,18 +21,22 @@
   <h1>Validations</h1>
 
   <h2>Write the string you want to test for validations</h2>
-  <input type="text" />
-  <button>validate</button>
 
   <section>
-    <div>Amount of modifications necessary: <span class="amount"></span></div>
-    <div>Amount of Characters between 6 and 20: <span class="constraint"></span></div>
-    <div>At least one lowercase character: <span class="constraint"></span></div>
-    <div>at least one uppercase character: <span class="constraint"></span></div>
-    <div>at least one number: <span class="constraint"></span></div>
-    <div>No repeated character 3 or more times in a row: <span class="constraint"></span></div>
-  </section>
+    <div class="input">
+      <input type="text" placeholder="Please insert password..." autofocus />
+      <button>validate</button>
+    </div>
 
+    <div class="constraints">
+      <div>Amount of characters between 6 and 20: <span class="constraint"></span></div>
+      <div>At least one lowercase character: <span class="constraint"></span></div>
+      <div>at least one uppercase character: <span class="constraint"></span></div>
+      <div>at least one number: <span class="constraint"></span></div>
+      <div>No repeated character 3 or more times in a row: <span class="constraint"></span></div>
+      <div>Amount of modifications necessary: <span class="amount"></span></div>
+    </div>
+  </section>
   <script type="module" src="./js/index.js"></script>
 </body>
 
