@@ -18,7 +18,11 @@ buttonRegex.addEventListener("click", e => {
 
   amountSpan.innerText = totalModifications.toString();
 
-  answersSpan.forEach((item, i) => item.innerText = texts[i].toString().toUpperCase());
+  answersSpan.forEach((item, i) => {
+    item.innerText = texts[i].toString().toUpperCase();
+    texts[i] === "passed" ? item.style.color = "green" : item.style.color = "red";
+  });
+
 });
 
 inputText.addEventListener("keyup", e => {
