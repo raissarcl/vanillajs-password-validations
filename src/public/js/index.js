@@ -10,11 +10,7 @@ buttonRegex.addEventListener("click", e => {
   e.preventDefault();
 
   const [totalModifications, values] = validatePassword(inputText.value);
-  const texts = values.map(i => {
-    if (i === true) { return "passed" };
-    if (i === false) { return "failed" };
-    return i;
-  });
+  const texts = values.map(i => i === true ? "passed" : "failed");
 
   amountSpan.innerText = totalModifications.toString();
 
